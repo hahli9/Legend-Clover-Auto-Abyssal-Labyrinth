@@ -1,8 +1,6 @@
 from adbutils import adb
-from pick import pick
 from client import Client
 from runner import Runner
-import configparser
 
 KEY_CTRL_C = 3
 KEY_ESCAPE = 27
@@ -18,13 +16,16 @@ if not emulator_list:
 elif len(emulator_list) == 1: 
     emulator_serial = emulator_list[0]
 else:
-    title = 'Choose an emulator'
-    options = emulator_list
-    option, index = pick(
-        options, title, indicator="=>", default_index=0, quit_keys=QUIT_KEYS
-    )    
+    user_input = ''
+    input_message = f'Please select an emulator:\n'
+    for index, emulator in enumerate(emulator_list):
+        input_message += f'{index + 1}. {emulator}\n'    
+    input_message += 'Your choice: '
+
+    while user_input.lower() not in map(str, range(1, len(emulator_list) + 1)):
+        user_input = input(input_message)
     # Create client instance
-    emulator_serial = option
+    emulator_serial = emulator_list[int(user_input) - 1]
 
 print(f"Connected to {emulator_serial}")
 client = Client(emulator_serial)

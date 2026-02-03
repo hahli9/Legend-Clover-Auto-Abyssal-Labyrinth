@@ -2,7 +2,7 @@
 Bot to automate running abyssal labyrinth to floor 10 then repeating.
 
 ## Setup
-- [Python](https://www.python.org/downloads/) 3.13.3 or higher (ADD TO PATH)
+- [Python](https://www.python.org/downloads/) 3.14 (ADD TO PATH)
 - Any Android emulator
 - 1920x1080 resolution
 - ADB Debugging Enabled
