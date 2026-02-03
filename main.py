@@ -45,4 +45,3 @@ try:
 except KeyboardInterrupt:
     print("Ending run.")
     print(f"Total runs: {run}")
-    pass
