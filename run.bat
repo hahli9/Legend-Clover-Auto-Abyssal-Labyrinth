@@ -9,5 +9,4 @@ if not exist ".\.venv\Scripts\python.exe" (
     exit /b 1
 )
 
-start "" .\.venv\Scripts\pythonw.exe main.py
-exit
+start "" .\.venv\Scripts\python.exe main.py
