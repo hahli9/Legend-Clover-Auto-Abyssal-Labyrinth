@@ -1,0 +1,5 @@
+[Times]
+delay = 1.5
+normal_fight = 45
+lv5_fight = 75
+lv10_fight = 140
