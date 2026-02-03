@@ -7,8 +7,7 @@ def locate_image(screenshot, reference, threshold = 0.8):
     result = ac.find_template(screenshot, ac.imread(f"assets/{reference}"), threshold)
     return result['result'][:2] if result is not None else None
 
-def keep_looking_for_image(client: Client, reference):
-    timeout = 60
+def keep_looking_for_image(client: Client, reference, timeout = 60):    
     start_time = time()
     location = None
     while location is None:            

@@ -24,6 +24,7 @@ class Runner:
         self.normal_fight = config.getfloat('Times', 'normal_fight')
         self.lv5_fight = config.getfloat('Times', 'lv5_fight')
         self.lv10_fight = config.getfloat('Times', 'lv10_fight')
+        self.timeout = config.getint('Times', 'timeout')
 
     def start_run(self):
         # Click Form & Embark Button
@@ -48,7 +49,7 @@ class Runner:
 
         # Select Door
         print("Door")
-        location = keep_looking_for_image(self.client, door_image)
+        location = keep_looking_for_image(self.client, door_image, self.timeout)
         sleep(self.delay)
         self.client.click(location)
         sleep(self.delay)
@@ -65,7 +66,7 @@ class Runner:
             
         # Start Battle
         print("Battle")
-        location = keep_looking_for_image(self.client, "battle.png")
+        location = keep_looking_for_image(self.client, "battle.png", self.timeout)
         sleep(self.delay)
         self.client.click(location)
         
@@ -74,7 +75,7 @@ class Runner:
 
         # End Battle
         print("Next")
-        location = keep_looking_for_image(self.client, "next.png")
+        location = keep_looking_for_image(self.client, "next.png", self.timeout)
         sleep(self.delay)
         self.client.click(location)
         sleep(5)
