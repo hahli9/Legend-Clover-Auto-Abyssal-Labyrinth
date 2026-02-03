@@ -3,7 +3,7 @@ REM Exit on first error
 setlocal
 
 echo Creating virtual environment...
-python -m .venv .venv
+python -m venv .venv
 if errorlevel 1 (
     echo Error: Failed to create virtual environment. Ensure Python is installed and in your PATH.
     pause
