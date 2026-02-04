@@ -10,3 +10,4 @@ if not exist ".\.venv\Scripts\python.exe" (
 )
 
 start "" .\.venv\Scripts\python.exe main.py
+@pause

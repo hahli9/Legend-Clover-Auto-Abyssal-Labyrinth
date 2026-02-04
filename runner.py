@@ -85,8 +85,10 @@ class Runner:
     
     def handle_floor_10(self):
         # Handle 10th Floor Reward
-        print("Handle 10th Floor Reward")        
-        self.client.click(self.OKAY_POS)
+        print("Handle 10th Floor Reward")
+        location = keep_looking_for_image(self.client, "ok.png", self.timeout)
+        sleep(self.delay)
+        self.client.click(location)
         sleep(self.delay)
 
     def reset_abyss(self):
@@ -96,5 +98,4 @@ class Runner:
         sleep(self.delay)
         print("Discard")        
         self.client.click(self.DISCARD_POS)
-        sleep(self.delay)
-
+        sleep(3)
