@@ -2,14 +2,7 @@ from adbutils import adb
 from client import Client
 from runner import Runner
 
-KEY_CTRL_C = 3
-KEY_ESCAPE = 27
-QUIT_KEYS = (KEY_CTRL_C, KEY_ESCAPE, ord("q"))
-
-connected_emulators = []
-emulators = adb.device_list()
-emulator_list = [emulator.serial for emulator in emulators if emulator.serial not in connected_emulators and emulator.serial is not None]
-emulator_serial = ""
+emulator_list = [emulator.serial for emulator in adb.device_list()]
 
 if not emulator_list:
     raise Exception("No emulators found.")
