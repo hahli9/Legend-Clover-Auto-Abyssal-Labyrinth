@@ -10,7 +10,7 @@ def locate_image(screenshot, reference, threshold = 0.8):
 def keep_looking_for_image(client: Client, reference, timeout = 60):    
     start_time = time()
     location = None
-    while location is None:            
+    while location is None:
         screenshot = client.capture_screen()
         location = locate_image(screenshot, reference)
         if location is None:

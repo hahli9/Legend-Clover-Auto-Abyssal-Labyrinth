@@ -1,0 +1,22 @@
+[project]
+name = "legend-clover-auto-abyssal-labyrinth"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "adbutils==2.12.0",
+    "aircv==1.4.6",
+    "certifi==2026.1.4",
+    "charset-normalizer==3.4.4",
+    "decorator==5.2.1",
+    "deprecation==2.1.0",
+    "idna==3.11",
+    "numpy==2.4.2",
+    "opencv-python==4.13.0.90",
+    "packaging==26.0",
+    "pillow==12.1.0",
+    "requests==2.32.5",
+    "retry2==0.9.5",
+    "urllib3==2.6.3",
+]
