@@ -31,9 +31,10 @@ try:
         print(f"Run {run}")
         runner.start_run()
         for i in range(10):
-            print(f"Floor: {i + 1}")
-            runner.floor_loop(i + 1)
-        runner.handle_floor_10()
+            print(f"Floor: {i + 1}")            
+            runner.handle_door(i + 1)
+            runner.handle_battle(i + 1)
+        runner.handle_floor_10_reward()
         runner.reset_abyss()
 except KeyboardInterrupt:
     print("Ending run.")
